@@ -1,0 +1,212 @@
+:root {
+    --magenta : hsl(300, 43%, 22%);
+    --rosa : hsl(333, 80%, 67%);
+    --grisMagentaFuerte : hsl(303, 10%, 53%);
+    --grisMagenta : hsl(300, 24%, 96%);
+    --blanco : hsl(0, 0%, 100%);
+
+    --fuente : 'League Spartan', san-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit
+}
+
+body {
+    font-family: var(--fuente);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8rem 0;
+}
+@media (min-width: 1440px) {
+    body {
+        margin: 0;
+        height: 100vh;
+        position: relative;
+    }
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+h1, p {
+    margin: 0;
+}
+[class$="__contenedor"] {
+    width: 33rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+@media (min-width: 1440px) {
+    [class$="__contenedor"] {
+        width: 111rem;
+    }
+
+    .main__informacion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 5rem;
+        text-align: left;
+    }
+
+    .main__header {
+        margin-right: 15rem;
+    }
+}
+.main__heading {
+    font-size: 4rem;
+    line-height: .8;
+    color: var(--magenta);
+}
+@media (min-width: 1440px) {
+    .main__heading {
+        font-size: 5rem;
+    }
+}
+.main__texto {
+    color: var(--grisMagentaFuerte);
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 2rem 0 4rem 0;
+}
+.main__calificaciones {
+    width: 100%; 
+}
+@media (min-width: 1440px) {
+    .calificacion {
+        width: 85%;
+    }
+    .calificacion--2 {
+        margin-left: 4rem;
+    }
+    .calificacion--3 {
+        margin-left: 8rem;
+    }
+}
+.calificacion__contenido {
+    background-color: var(--grisMagenta);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+@media (min-width: 1440px) {
+    .calificacion__contenido {
+        flex-direction: row;
+        gap: 3rem;
+        padding: 1.5rem 2rem;
+    }
+}
+.calificacion__contenido:nth-child(3) {
+    margin-bottom: 0;
+}
+.main__estrellas {
+    margin-bottom: 1rem;
+    width: 11rem;  
+    height: 1.5rem;  
+    background-image: 
+    url(../images/icon-star.svg),
+    url(../images/icon-star.svg),
+    url(../images/icon-star.svg),
+    url(../images/icon-star.svg),
+    url(../images/icon-star.svg);
+    background-repeat: no-repeat;
+    background-position: 
+    0 0,
+    25% 0,
+    50% 0,
+    75% 0,
+    100% 0;
+}
+@media (min-width: 1440px) {
+    .main__estrellas {
+        margin-bottom: 0;
+    }
+}
+.main__descripcion {
+    margin: 0;
+    color: var(--magenta);
+    font-weight: 700;
+}
+
+.testimoniales {
+    margin-top: 4rem;
+    text-align: left;
+}
+@media (min-width: 1440px) {
+    .testimoniales {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    .testimonial--irene {
+        margin-top: 1rem;
+    }
+    .testimonial--anne {
+        margin-top: 2rem;
+    }
+}
+.testimonial {
+    background-color: var(--magenta);
+    margin-bottom: 2rem;
+    padding: 4rem 3rem;
+    border-radius: 1rem;
+}
+@media (min-width: 1440px) {
+    .testimonial {
+        margin-bottom: 0;
+    }
+}
+.autor {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.autor__imagen {
+    width: 4rem;
+    border-radius: 50%;
+}
+.autor__nombre {
+    color: var(--blanco);
+    font-weight: 700;
+}
+.autor__nombre span {
+    color: var(--rosa);
+    font-weight: 400;
+}
+.autor__texto {
+    margin-top: 2rem;
+    color: var(--blanco);
+    line-height: 1.5;
+}
+
+.attribution {
+    text-align: center;
+    margin: 0 3rem;
+}
+@media (min-width: 1440px) {
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 4rem;
+    }
+}
+.attribution a {
+    color: var(--magenta);
+    font-weight: 700;
+    text-decoration: none;
+}
